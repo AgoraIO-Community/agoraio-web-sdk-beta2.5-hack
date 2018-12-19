@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="cache-control" content="max-age=0">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <link rel="shortcut icon" href="assets/favicon.ico">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+    crossorigin="anonymous">
+
+  <link rel="chrome-webstore-item" href="https://chrome.google.com/webstore/detail/minllpmhdgpndnkomcoccfekfegnlikg">
+  <title>AgoraWeb</title>
+</head>
+
+<body>
+  <div class="wrapper" id="page-meeting">
+    <div class="ag-header">
+      <div class="ag-header-lead">
+        <img class="ag-header-logo" src="../../assets/images/ag-logo.png" alt="">
+        <span>AgoraWeb v2.2</span>
+      </div>
+
+      <div class="ag-header-msg" id="share">
+
+        <a id="" style="border:2px solid rgb(238, 97, 97);padding:10px;border-radius:25px;color:white">Room Name: <span
+            style="cursor:pointer !important" id="room-name"></span></a>
+      </div>
+    </div>
+
+    <div class="ag-main" style="height: 90%">
+      <div style="width:fit-content">
+        <a style="border:2px solid rgb(238, 97, 97);color:white;padding:10px;border-radius:25px;right:0">Battery Level:<span
+            id="batlevel"></span></a>
+        <a style="border:2px solid rgb(238, 97, 97);color:white;padding:10px;border-radius:25px;right:0">Network :<span
+            id="network"></span></a>
+        <a style="border:2px solid rgb(238, 97, 97);color:white;padding:10px;border-radius:25px;right:0">Local Audio
+          Stats:<select id="audioselector">
+
+            <option value="CodecType">CodecType</option>
+            <option value="MuteState">MuteState</option>
+            <option value="RecordingLevel">RecordingLevel</option>
+            <option value="SamplingRate">SamplingRate</option>
+          </select>&nbsp;&nbsp;<span id="localaudio"></span></a>
+          <a style="border:2px solid rgb(238, 97, 97);color:white;padding:10px;border-radius:25px;right:0">Local Video
+            Stats:<select id="videoselector">
+  
+             
+            
+
+              <option value="EncodeDelay">EncodeDelay</option>
+              <option value="SendBitrate">SendBitrate</option>
+              <option value="SendFrameRate">SendFrameRate</option>
+              <option value="SendResolutionHeight">SendResolutionHeight</option>
+              <option value="SendResolutionWidth">SendResolutionWidth</option>
+              <option value="TargetSendBitrate">TargetSendBitrate</option>
+
+            </select>&nbsp;&nbsp;<span id="localvideo"></span></a>
+        
+      </div>
+
+      <div class="ag-container" id="ag-canvas" style="margin-top:10px">
+
+        <!-- btn group -->
+
+        <div class="ag-btn-group">
+          <span class="ag-btn exitBtn" title="Exit">
+            <i class="ag-icon icon-call-ends"></i>
+          </span>
+          <span class="ag-btn videoControlBtn" title="Enable/Disable Video">
+            <i class="ag-icon icon-camera"></i>
+            <i class="ag-icon icon-camera-off"></i>
+          </span>
+          <span class="ag-btn audioControlBtn" title="Enable/Disable Audio">
+            <i class="ag-icon icon-mic"></i>
+            <i class="ag-icon icon-mic-off"></i>
+          </span>
+          <span class="ag-btn shareScreenBtn" title="Share Screen">
+            <i class="ag-icon icon-screen-share"></i>
+          </span>
+          <span class="ag-btn displayModeBtn" title="Switch Display Mode">
+            <i class="ag-icon icon-switch-layout"></i>
+          </span>
+          <span class="ag-btn ctrlBtn" title="Control">
+            <i class="ag-icon icon-ctrl"></i>
+          </span>
+          <!-- <span class="ag-btn disableRemoteBtn" title="Hide/Show Remote Stream">
+            <i class="ag-icon icon-visible"></i>
+             <i class="ag-icon icon-invisible"></i>
+          </span> -->
+          <!-- <span class="ag-btn inviteBtn"></span>
+            <span class="ag-btn shareBtn"></span> -->
+        </div>
+      </div>
+
+    </div>
+
+    <div class="container-fluid" style="background-color:white;height: fit-content;;bottom:0">
+      <h2>Volume Stats</h3>
+        <div class="row" id="volumeindicators">
+
+        </div>
+
+    </div>
+
+
+
+    <!-- modal/messages/notifications -->
+  </div>
+ 
+  <script src="https://cdn.agora.io/sdk/web/AgoraRTCSDK-2.5.0.js"></script>
+  <!-- inject -->
+</body>
+
+</html>
